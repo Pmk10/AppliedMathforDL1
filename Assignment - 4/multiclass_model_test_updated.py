@@ -5,7 +5,11 @@ import tensorflow as tf
 import pytest
 import os
 
-os.chdir('/Users/karthikeyanm/AppliedMathforDL')
+# Get the directory of the current script
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Set the working directory to the script's directory
+os.chdir(current_dir)
 
 from multiclass_model_solution_updated import fit_mnist_model, evaluate_mnist_model
 from multiclass_model_solution_updated import get_mnist_data
