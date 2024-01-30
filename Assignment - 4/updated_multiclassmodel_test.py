@@ -5,11 +5,12 @@ import tensorflow as tf
 import pytest
 import os
 
-# Get the directory of the current script
-current_dir = os.path.dirname(os.path.abspath(__file__))
+script_dir = os.path.dirname(os.path.realpath(__file__))
 
-# Set the working directory to the script's directory
-os.chdir(current_dir)
+# Assuming your data is in the same directory as the script
+data_dir = os.path.join(script_dir, 'Assignment - 4')
+
+os.chdir(data_dir)
 
 from multiclass_model_solution_updated import fit_mnist_model, evaluate_mnist_model
 from multiclass_model_solution_updated import get_mnist_data
