@@ -28,4 +28,4 @@ jobs:
 
     - name: Run tests
       run: |
-        python -m pytest -v
+        python -m pytest -v -W ignore::DeprecationWarning
